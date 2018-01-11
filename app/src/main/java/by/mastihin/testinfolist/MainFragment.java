@@ -38,7 +38,7 @@ public class MainFragment extends Fragment {
 
         final View content = view.findViewById(R.id.content);
 
-        final Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
+       // final Toolbar toolbar = getActivity().findViewById(R.id.toolbar);
 
         View llBottomSheet = view.findViewById(R.id.bottom_sheet);
         bottomSheetBehavior = BottomSheetBehavior.from(llBottomSheet);
@@ -60,7 +60,7 @@ public class MainFragment extends Fragment {
             public void onSlide(@NonNull View bottomSheet, float slideOffset) {
                 if (slideOffset > 0 && slideOffset < 0.5) {
                     content.animate().translationY(-600 * slideOffset).setDuration(0).start();
-                    toolbar.animate().translationY(-600 * slideOffset).setDuration(0).start();
+                    //toolbar.animate().translationY(-600 * slideOffset).setDuration(0).start();
                 }
             }
         });
